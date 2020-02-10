@@ -5,7 +5,7 @@ var pets = ['cat', 'dog'];
 var pets2 = ['cat', 'dog'];
 var meh = undefined;
 var meh2 = null;
-var obj = {};
+var obj = { a: 'asd' };
 // Tuple
 var basket;
 basket = ['asdf', 5];
@@ -28,3 +28,23 @@ var func2 = function () {
     console.log('asdf');
     return 'asdf';
 };
+var funcc = function (robots) {
+    console.log(robots);
+};
+funcc({ type: 'adsf', count: 2 });
+// functions
+var func3 = function (robots) {
+    console.log(robots);
+};
+// Class
+var Animal = /** @class */ (function () {
+    function Animal(sound) {
+        this.sing = sound;
+    }
+    Animal.prototype.greet = function () {
+        return "Hello " + this.sing;
+    };
+    return Animal;
+}());
+var lion = new Animal('Raaaawwwr!!');
+console.log(lion.greet());

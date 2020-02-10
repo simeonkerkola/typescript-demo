@@ -8,7 +8,7 @@ const pets2: Array<string> = ['cat','dog']
 let meh: undefined =undefined
 let meh2: null =null
 
-let obj: object = {}
+let obj: object = {a: 'asd'}
 
 // Tuple
 let basket: [string, number]
@@ -32,3 +32,37 @@ let func2 = ():string => {
   console.log('asdf')
   return 'asdf'
 }
+
+// interface
+interface RobotArmy {
+  count: number,
+  type: string,
+  magic?: string 
+}
+
+let funcc = (robots: RobotArmy) => {
+  console.log(robots)
+}
+
+funcc({type:'adsf', count:2})
+
+
+// functions
+let func3 = (robots: RobotArmy): void => {
+  console.log(robots)
+}
+
+// Class
+class Animal {
+  sing: string
+  constructor(sound: string) {
+    this.sing  = sound
+  }
+
+  greet() {
+    return `Hello ${this.sing}`
+  }
+}
+
+const lion = new Animal('Raaaawwwr!!')
+console.log(lion.greet())
