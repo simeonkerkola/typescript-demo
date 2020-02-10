@@ -4,3 +4,5 @@ const sum =(a:number, b:number) => {
 }
 
 sum(5, 5)
+
+console.log('tag', '')
